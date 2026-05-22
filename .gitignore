@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+*.swo
+*.tmp
+
+# Local-only files can be added here without being tracked.
+local/
+secrets/
+*.secret
+*.local

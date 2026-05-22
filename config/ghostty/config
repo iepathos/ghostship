@@ -1,0 +1,88 @@
+# WezTerm-inspired Ghostty config.
+
+# Color scheme
+theme = TokyoNight
+
+# Font and typography
+font-family = Hack
+font-family = Sarasa Term SC
+font-family = Sarasa Mono SC
+font-size = 14
+adjust-cell-height = 20%
+adjust-cell-width = -10%
+
+# Window appearance
+window-padding-x = 18
+window-padding-y = 14,0
+background-opacity = 1
+background-blur = false
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = false
+macos-window-buttons = hidden
+window-step-resize = false
+command = /opt/homebrew/bin/tmux new-session -A -s main
+
+# Tabs, windows, and splits
+window-inherit-working-directory = true
+tab-inherit-working-directory = true
+split-inherit-working-directory = true
+window-inherit-font-size = false
+confirm-close-surface = false
+unfocused-split-opacity = 1
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = true
+cursor-text = cell-background
+
+# Scrollback and links
+scrollback-limit = 10000000
+scrollbar = never
+link-url = true
+link-previews = true
+
+# macOS Option key should behave like terminal Alt for word movement.
+macos-option-as-alt = true
+
+# Keybindings
+# Route the familiar WezTerm/Ghostty shortcuts into tmux. This avoids
+# native macOS tabs, which yabai may treat as additional windows.
+keybind = super+t=text:\x02c
+keybind = super+d=text:\x02|
+keybind = super+shift+d=text:\x02-
+keybind = super+w=text:\x02w
+
+keybind = super+shift+[=text:\x02p
+keybind = super+shift+]=text:\x02n
+
+keybind = super+1=text:\x021
+keybind = super+digit_1=text:\x021
+keybind = super+2=text:\x022
+keybind = super+digit_2=text:\x022
+keybind = super+3=text:\x023
+keybind = super+digit_3=text:\x023
+keybind = super+4=text:\x024
+keybind = super+digit_4=text:\x024
+keybind = super+5=text:\x025
+keybind = super+digit_5=text:\x025
+keybind = super+6=text:\x026
+keybind = super+digit_6=text:\x026
+keybind = super+7=text:\x027
+keybind = super+digit_7=text:\x027
+keybind = super+8=text:\x028
+keybind = super+digit_8=text:\x028
+keybind = super+9=text:\x029
+
+keybind = super+alt+h=text:\x02h
+keybind = super+alt+j=text:\x02j
+keybind = super+alt+k=text:\x02k
+keybind = super+alt+l=text:\x02l
+
+keybind = super+k=clear_screen
+keybind = super+0=reset_font_size
+keybind = super+f=start_search
+keybind = super+shift+p=toggle_command_palette
+keybind = super+shift+z=text:\x02z
+
+keybind = alt+arrow_left=esc:b
+keybind = alt+arrow_right=esc:f
