@@ -38,6 +38,7 @@ cursor-text = cell-background
 # Scrollback and links
 scrollback-limit = 10000000
 scrollbar = never
+mouse-reporting = true
 link-url = true
 link-previews = true
 
@@ -83,6 +84,7 @@ keybind = super+0=reset_font_size
 keybind = super+f=start_search
 keybind = super+shift+p=toggle_command_palette
 keybind = super+shift+z=text:\x02z
+keybind = super+shift+m=toggle_mouse_reporting
 
 keybind = alt+arrow_left=esc:b
 keybind = alt+arrow_right=esc:f
