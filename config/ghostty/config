@@ -39,6 +39,8 @@ cursor-text = cell-background
 scrollback-limit = 10000000
 scrollbar = never
 mouse-reporting = true
+mouse-shift-capture = never
+copy-on-select = clipboard
 link-url = true
 link-previews = true
 
