@@ -5,24 +5,24 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 backup_root="${HOME}/.ghostship-backups/$(date +%Y%m%d%H%M%S)"
 
 link_file() {
-  local source="$1"
-  local target="$2"
+	local source="$1"
+	local target="$2"
 
-  mkdir -p "$(dirname "$target")"
+	mkdir -p "$(dirname "$target")"
 
-  if [[ -L "$target" && "$(readlink "$target")" == "$source" ]]; then
-    printf 'ok: %s already linked\n' "$target"
-    return
-  fi
+	if [[ -L "$target" && "$(readlink "$target")" == "$source" ]]; then
+		printf 'ok: %s already linked\n' "$target"
+		return
+	fi
 
-  if [[ -e "$target" || -L "$target" ]]; then
-    mkdir -p "$backup_root$(dirname "$target")"
-    mv "$target" "$backup_root$target"
-    printf 'backup: %s -> %s\n' "$target" "$backup_root$target"
-  fi
+	if [[ -e "$target" || -L "$target" ]]; then
+		mkdir -p "$backup_root$(dirname "$target")"
+		mv "$target" "$backup_root$target"
+		printf 'backup: %s -> %s\n' "$target" "$backup_root$target"
+	fi
 
-  ln -s "$source" "$target"
-  printf 'link: %s -> %s\n' "$target" "$source"
+	ln -s "$source" "$target"
+	printf 'link: %s -> %s\n' "$target" "$source"
 }
 
 link_file "$repo_root/config/ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"

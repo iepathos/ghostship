@@ -23,6 +23,18 @@ repos:
         language: system
         files: ^scripts/.*\.sh$
 
+      - id: shellcheck
+        name: shellcheck
+        entry: shellcheck
+        language: system
+        files: ^scripts/.*\.sh$
+
+      - id: shfmt
+        name: shfmt
+        entry: shfmt -w
+        language: system
+        files: ^scripts/.*\.sh$
+
       - id: zsh-syntax
         name: zsh syntax
         entry: zsh -n
