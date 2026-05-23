@@ -1,0 +1,12 @@
+[default.extend-words]
+# Project-specific words that aren't typos.
+ghostty = "ghostty"
+Ghostty = "Ghostty"
+Headspinio = "Headspinio"
+headspinio = "headspinio"
+yabai = "yabai"
+
+[files]
+extend-exclude = [
+  "*.lock",
+]
