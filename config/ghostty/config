@@ -81,6 +81,12 @@ keybind = super+alt+j=text:\x02j
 keybind = super+alt+k=text:\x02k
 keybind = super+alt+l=text:\x02l
 
+# Alternate pane navigation that avoids yabai's common Alt-h/j/k/l bindings.
+keybind = super+ctrl+h=text:\x02h
+keybind = super+ctrl+j=text:\x02j
+keybind = super+ctrl+k=text:\x02k
+keybind = super+ctrl+l=text:\x02l
+
 keybind = super+k=clear_screen
 keybind = super+0=reset_font_size
 keybind = super+f=start_search
