@@ -21,19 +21,19 @@ repos:
         name: bash syntax
         entry: bash -n
         language: system
-        files: ^scripts/.*\.sh$
+        files: ^(scripts/.*\.sh|config/yabai/yabairc)$
 
       - id: shellcheck
         name: shellcheck
         entry: shellcheck
         language: system
-        files: ^scripts/.*\.sh$
+        files: ^(scripts/.*\.sh|config/yabai/yabairc)$
 
       - id: shfmt
         name: shfmt
         entry: shfmt -w
         language: system
-        files: ^scripts/.*\.sh$
+        files: ^(scripts/.*\.sh|config/yabai/yabairc)$
 
       - id: zsh-syntax
         name: zsh syntax
