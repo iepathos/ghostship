@@ -1,3 +1,1 @@
-
-export PATH="$PATH:/Users/glen/.foundry/bin"
-. "$HOME/.cargo/env"
+# Keep this file minimal. zsh reads it for every shell, including scripts.
