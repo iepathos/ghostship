@@ -6,7 +6,6 @@ export EDITOR='hx'
 export VISUAL='hx'
 
 export PYENV_ROOT="$HOME/.pyenv"
-export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -47,20 +46,6 @@ else
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
-
-_load_nvm() {
-    unset -f nvm node npm npx pnpm claude codex gemini
-    [[ -s "$BREW_PREFIX/opt/nvm/nvm.sh" ]] && source "$BREW_PREFIX/opt/nvm/nvm.sh"
-    [[ -s "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ]] && source "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
-}
-nvm() { _load_nvm && nvm "$@"; }
-node() { _load_nvm && node "$@"; }
-npm() { _load_nvm && npm "$@"; }
-npx() { _load_nvm && npx "$@"; }
-pnpm() { _load_nvm && pnpm "$@"; }
-claude() { _load_nvm && claude "$@"; }
-codex() { _load_nvm && codex "$@"; }
-gemini() { _load_nvm && gemini "$@"; }
 
 ## Aliases
 
