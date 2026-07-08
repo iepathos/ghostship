@@ -59,7 +59,7 @@ alias l='eza -al'
 alias ls='eza'
 
 alias workhorse="ssh glen@172.16.1.23"
-alias cx='codex --yolo "commit"'
+alias cx='codex --model gpt-5.4-mini -c model_reasoning_effort="low" --yolo "commit"'
 alias yabai-reload='yabai --restart-service; launchctl kickstart -k gui/$(id -u)/com.koekeishiya.skhd'
 
 ## Git aliases
