@@ -29,6 +29,10 @@ else
     compinit -C
 fi
 
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
 ## Tool managers
 
 if [[ -o interactive ]]; then
@@ -58,7 +62,7 @@ alias cat='bat'
 alias l='eza -al'
 alias ls='eza'
 
-alias cx='codex --model gpt-5.3-codex-spark -c model_reasoning_effort="low" --yolo "commit"'
+alias cx='codex --model gpt-5.3-codex-spark --yolo "commit"'
 alias yabai-reload='yabai --restart-service; launchctl kickstart -k gui/$(id -u)/com.koekeishiya.skhd'
 
 ## Git aliases
@@ -111,11 +115,9 @@ bindkey '^r' history-incremental-search-backward
 
 ## Prompt and shell plugins
 
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 [[ -r "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-[[ -r "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 eval "$(starship init zsh)"
 
@@ -131,6 +133,7 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 
 ## Local overrides
@@ -138,3 +141,6 @@ setopt HIST_REDUCE_BLANKS
 local_config="$HOME/.config/ghostship/local.zsh"
 [[ -r "$local_config" ]] && source "$local_config"
 unset local_config
+
+# Keep syntax highlighting last so it can wrap widgets added above.
+[[ -r "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
