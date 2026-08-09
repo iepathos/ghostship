@@ -98,6 +98,9 @@ alias gswc='git switch -c'
 
 ## Keybindings
 
+# Match Oh My Zsh word movement by treating punctuation as word boundaries.
+WORDCHARS=''
+
 sudo-command-line() {
     [[ -z $BUFFER ]] && LBUFFER="$(fc -ln -1)"
     if [[ $BUFFER == sudo\ * ]]; then
