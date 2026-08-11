@@ -62,7 +62,7 @@ alias cat='bat'
 alias l='eza -al'
 alias ls='eza'
 
-alias cx='codex --model gpt-5.3-codex-spark --yolo "commit"'
+alias cx='codex --model gpt-5.3-codex-spark -c model_reasoning_effort=xhigh --yolo "commit"'
 alias yabai-reload='yabai --restart-service; launchctl kickstart -k gui/$(id -u)/com.koekeishiya.skhd'
 
 ## Git aliases
