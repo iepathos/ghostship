@@ -52,4 +52,5 @@ skhd --restart-service
   `prefix + Ctrl-r`.
 - tmux owns the bottom tab UI. Ghostty owns window rendering, font metrics, and
   key routing into tmux.
-- Shell files are personal and may contain machine-specific paths.
+- User-specific paths resolve from `$HOME`. This setup still assumes macOS
+  with Homebrew installed at `/opt/homebrew`.
