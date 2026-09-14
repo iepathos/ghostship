@@ -5,6 +5,8 @@ Personal terminal setup for the Ghostty + tmux + Starship stack.
 ## Tracked Configs
 
 - `config/ghostty/config` -> `~/Library/Application Support/com.mitchellh.ghostty/config`
+- `config/helix/config.toml` -> `~/.config/helix/config.toml`
+- `config/helix/languages.toml` -> `~/.config/helix/languages.toml`
 - `config/yabai/yabairc` -> `~/.yabairc`
 - `config/skhd/skhdrc` -> `~/.skhdrc`
 - `config/tmux/tmux.conf` -> `~/.config/tmux/tmux.conf`
@@ -22,6 +24,10 @@ brew bundle
 
 The installer backs up existing files under `~/.ghostship-backups/<timestamp>/`
 before creating symlinks.
+
+Helix settings and language-server configuration are included. The configured
+language servers (`rust-analyzer`, `pylsp`, `gopls`, and
+`typescript-language-server`) must be installed separately.
 
 tmux persistence uses TPM and `tmux-resurrect`. Install the plugins with:
 

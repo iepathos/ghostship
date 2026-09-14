@@ -1,0 +1,47 @@
+#theme = "catppuccin_mocha"
+
+theme = "catppuccin_mocha"
+
+[editor.soft-wrap]
+enable = true
+
+[keys.insert]
+C-c = "normal_mode"
+#C-[" = "normal_mode"
+
+[keys.normal]
+# Select entire file
+C-a = ["select_all"]
+# Center cursor after jumping
+#C-d = ["half_page_down", "align_view_center"]
+#C-u = ["half_page_up", "align_view_center"]
+#C-f = ["page_down", "align_view_center"]
+#C-b = ["page_up", "align_view_center"]
+
+# Quick save/quit
+C-s = ":w"
+C-q = ":q"
+space.r = ":reload"
+
+# Better line navigation
+H = "goto_line_start"
+L = "goto_line_end"
+
+# System clipboard integration
+y = "yank_to_clipboard"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+
+
+# Easier split navigation
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+
+# Split commands
+#"|" = "vsplit"
+#"-" = "hsplit"
+
+# Global search/replace
+space.s = "global_search"

@@ -26,6 +26,8 @@ link_file() {
 }
 
 link_file "$repo_root/config/ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+link_file "$repo_root/config/helix/config.toml" "$HOME/.config/helix/config.toml"
+link_file "$repo_root/config/helix/languages.toml" "$HOME/.config/helix/languages.toml"
 link_file "$repo_root/config/yabai/yabairc" "$HOME/.yabairc"
 link_file "$repo_root/config/skhd/skhdrc" "$HOME/.skhdrc"
 link_file "$repo_root/config/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
